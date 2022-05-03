@@ -1,0 +1,625 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.Logo {
+  grid-area: 1 / 1 / 2 / 2;
+  margin: 5%;
+  opacity: 100%;
+  width: fit-content;
+  transition: all 1.5s ease-in-out;
+  width: 5vw;
+}
+.Logo:hover {
+  opacity: 80%;
+}
+
+.LogoName{
+margin: 1.5vw 0vw 0vw -8vw;
+    font-size: 3.3vw;
+}
+
+.Navbar {
+  grid-area: 1 / 3 / 2 / 7;
+  font-size: 1.8vw;
+}
+
+@media screen and (min-width: 640px) {
+  .LinkOpened {
+    position: relative;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 0.21vw;
+    background-image: linear-gradient(90deg, #f06e6e, #f89d9d);
+    transition: background 0.5s ease-in-out;
+  }
+
+  .LinkOpened:hover {
+    background-size: 100% 100px;
+    color: #000;
+  }
+
+  .highlight {
+    position: relative;
+    background-image: linear-gradient(90deg, #f06e6e, #f89d9d);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    transition: background 0.5s ease-in-out;
+  }
+
+  .highlight:hover {
+    background-size: 100% 2.41vw;
+    color: #000;
+  }
+}
+
+.NavbarMenuLinks {
+  list-style-type: none;
+  text-align: right;
+  width: 61.2vw;
+  position: absolute;
+  background-color: white;
+}
+
+.NavLink {
+  position: relative;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 0.21vw;
+  transition: background 0.5s ease-in-out;
+  display: inline;
+  margin-right: 0.5%;
+}
+
+.NavLink:hover {
+  color: #000;
+  background-image: linear-gradient(90deg, #f06e6e, #f89d9d);
+}
+
+a:link {
+  color: #000;
+}
+
+.MainContent {
+  grid-area: 2 / 1 / 2 / 7;
+  text-align: -webkit-center;
+  background-image: url("../../src/img/main.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 62.5%;
+}
+
+.Button {
+  transition: all 1.1s ease-in-out;
+}
+
+.Button:hover {
+  transform: scale(0.95);
+}
+
+.MainTitle {
+  margin: -3%;
+  font-size: 10vw;
+}
+
+.Title {
+  margin: 0.5%;
+  font-size: 2vw;
+  border-top: 0.0625em solid;
+}
+
+.MainImage {
+  margin-top: 27%;
+  width: max-content;
+  margin-bottom: 25%;
+  color: white;
+}
+
+.MainText {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr 2.3fr;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "MainTextTitle MainTextTitle"
+    "MainTextAbout MainTextAbout"
+    "FirstImg SecondImg";
+  color: black;
+  margin: 0 5% 0 5%;
+  align-items: center;
+}
+
+.MainTextTitle {
+  grid-area: MainTextTitle;
+  font-size: 3.34vw;
+  margin: 0.5%;
+  border-bottom: 0.1vw #f06e6e solid;
+  z-index: 2;
+}
+
+.MainTextAbout {
+  grid-area: MainTextAbout;
+  font-size: 2.08vw;
+  margin: 0.5%;
+  text-align: left;
+  z-index: 1;
+}
+
+.FirstImg {
+  grid-area: FirstImg;
+  justify-self: start;
+  margin: 2% 5% 0 5%;
+  z-index: 2;
+}
+
+SecondImg {
+  grid-area: SecondImg;
+  margin: 5% 5% 0 5%;
+  grid-area: SecondImg;
+  justify-self: end;
+  vertical-align: center;
+  z-index: 2;
+}
+
+.Footer {
+  grid-area: 1 / 3 / 2 / 7;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0% 5%;
+  grid-auto-flow: row;
+  grid-template-areas: "Socials Links Rules";
+  background-image: url("../../src/img/footer.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 24.75vw;
+  position: absolute;
+  width: 100%;
+  top: 140.14vw;
+  z-index: 2;
+  left: 0;
+}
+
+.SocialsText {
+  position: absolute;
+  left: 12.6%;
+  right: 80.58%;
+  top: 14.04%;
+  bottom: 68.14%;
+  font-size: 1.8vw;
+}
+
+.Socials {
+  grid-area: Socials;
+  background-image: url("../../src/img/SocialsImage.svg");
+  background-size: 21.52vw;
+  background-repeat: no-repeat;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.SocialsImages {
+  display: inline-block;
+  width: 14.61vw;
+  position: absolute;
+  left: 7.6%;
+  right: 76.58%;
+  top: 22.04%;
+  bottom: 68.14%;
+  margin: 3%;
+}
+
+.Links {
+  grid-area: Links;
+  background-image: url("../../src/img/SocialsImage.svg");
+  background-size: 21.52vw;
+  background-repeat: no-repeat;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+.LinksText {
+  position: absolute;
+  left: 49.2%;
+  right: 43.76%;
+  top: 14.04%;
+  bottom: 68.14%;
+  font-size: 1.8vw;
+}
+
+.NavbarMenuNavLinkFooterLinks {
+  padding: 0;
+  margin: 0.5%;
+  position: absolute;
+  left: 42.7%;
+  right: 43.76%;
+  top: 31.04%;
+  bottom: 68.14%;
+  font-size: 1.42vw;
+  display: block;
+  width: 10%;
+}
+
+.NavLinkFooter a {
+  display: inline-block;
+  text-decoration: none;
+  width: 18.91vw;
+  text-align: center;
+  margin: 0.5%;
+}
+
+.NavbarMenuNavLinkFooterLinks a:visited {
+  color: black;
+}
+
+.NavbarMenuNavLinkFooterLinks {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.Rules {
+  grid-area: Rules;
+  background-image: url("../../src/img/SocialsImage.svg");
+  background-size: 21.52vw;
+  background-repeat: no-repeat;
+  margin-left: 21%;
+  margin-top: 5%;
+}
+
+.RulesText {
+  position: absolute;
+  font-size: 1.8vw;
+  left: 83.1%;
+  right: 7.17%;
+  top: 14.04%;
+  bottom: 52.94%;
+}
+
+.NavbarMenuNavLinkFooterRules {
+  padding: 0;
+  margin: 0.5%;
+  position: absolute;
+  left: 77%;
+  right: 43.76%;
+  top: 31.04%;
+  bottom: 68.14%;
+  font-size: 1.42vw;
+  display: block;
+  width: 10%;
+}
+
+.NavRuleFooter a {
+  display: inline-block;
+  text-decoration: none;
+  width: 18.91vw;
+  text-align: center;
+  margin: 0.5%;
+}
+
+.NavbarMenuNavLinkFooterRules a:visited {
+  color: black;
+}
+
+.NavbarMenuNavLinkFooterRules {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+#menu-mobile {
+  display: none;
+}
+
+.NavbarMenuLinks {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.NavbarMenuLinks li {
+  font-size: 1.8vw;
+  display: block;
+  width: 100%;
+}
+
+.NavbarMenuLinks a {
+  display: block;
+  text-decoration: none;
+  font-size: 3.8vw;
+}
+
+.NavbarMenuLinks a:visited {
+  color: black;
+}
+
+.toggle-button {
+  display: block;
+  cursor: pointer;
+  font-size: 6.4vw;
+  text-align: right;
+  border-bottom: 1px #f06e6e solid;
+}
+
+#menu-mobile:checked + nav .NavbarMenuLinks {
+  display: block;
+}
+
+@media screen and (min-width: 640px) {
+  .toggle-button {
+    display: none;
+  }
+  .NavbarMenuLinks {
+    display: block;
+    margin: 1.5%;
+    font-size: 3vw;
+  }
+
+  .NavbarMenuLinks li {
+    width: auto;
+    display: inline-block;
+  }
+  .NavbarMenuLinks a {
+    display: inline-block;
+    font-size: 1.82vw;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-bottom: 0;
+  }
+}
+
+.Circle {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 85.53vw;
+  width: 25.3vw;
+  opacity: 100%;
+  transition: all 1.5s ease-in-out;
+}
+.Circle:hover {
+  opacity: 30%;
+  width: 15.3vw;
+}
+
+.Rectangle {
+  position: absolute;
+  width: 12.3vw;
+  height: 12.3vw;
+  left: 82.63vw;
+  top: 77.31vw;
+  background: #be4c4c;
+  transform: rotate(28.03deg);
+  z-index: 1;
+  transition: all 1.5s ease-in-out;
+}
+
+.Rectangle:hover {
+  transform: rotate(79.03deg);
+}
+
+.Rectangle1 {
+  position: absolute;
+  width: 8.8vw;
+  height: 8.8vw;
+  left: 52.15vw;
+  top: 132.1vw;
+  background: #f85e5e;
+  transform: rotate(-32.38deg);
+  z-index: 1;
+}
+
+@media screen and (max-width: 580px) {
+
+  .LogoName{
+    margin: 2.5vw 0vw 0vw -4vw;
+    font-size: 5.3vw;
+    }
+
+  .Logo {
+    width: 8vw;
+  }
+
+  .Navbar {
+    font-size: 1.8vw;
+  }
+
+  .MainContent {
+    background-size: 137%;
+  }
+
+  .Button {
+    width: 28vw;
+  }
+
+  .MainTitle {
+    margin: -3%;
+    font-size: 15vw;
+  }
+
+  .Title {
+    font-size: 3.7vw;
+  }
+
+  .MainImage {
+    margin-top: 35%;
+    font-family: "Cormorant Garamond", serif;
+    width: max-content;
+    margin-bottom: 25%;
+    color: white;
+  }
+
+  .MainText {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "MainTextTitle MainTextTitle"
+      "MainTextAbout MainTextAbout"
+      "FirstImg SecondImg";
+    color: black;
+    margin: 0 5% 0 5%;
+    align-items: center;
+    z-index: 5;
+  }
+
+  .MainTextTitle {
+    font-size: 5.34vw;
+    border-bottom: 0.1vw #f06e6e solid;
+    z-index: 2;
+  }
+
+  .MainTextAbout {
+    grid-area: MainTextAbout;
+    font-size: 4.08vw;
+    margin: 0.5%;
+    text-align: left;
+    z-index: 1;
+  }
+
+  .FirstImg > img {
+    width: 60vw;
+    grid-area: FirstImg;
+    justify-self: right;
+    margin: 0% 5% 0 5%;
+    z-index: 2;
+    width: 37vw;
+  }
+
+  .SecondImg > img {
+    grid-area: SecondImg;
+    margin: 5% 5% 0 5%;
+    grid-area: SecondImg;
+    justify-self: end;
+    vertical-align: center;
+    z-index: 2;
+    width: 36vw;
+  }
+
+  .Footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0% 0.5%;
+    height: 32.75vw;
+    top: 243.14vw;
+    left: 0;
+  }
+
+  .SocialsText {
+    left: 8.4%;
+    top: 4.04%;
+    font-size: 3.8vw;
+  }
+  .Socials {
+    background-size: 29.52vw;
+    margin-left: 8%;
+  }
+
+  .SocialsImages {
+    width: 21.61vw;
+    left: 4.6%;
+    top: 25.04%;
+  }
+
+  .Links {
+    background-size: 29.52vw;
+    margin-left: 8%;
+  }
+
+  .LinksText {
+    left: 43.2%;
+    top: 4.04%;
+    font-size: 3.8vw;
+  }
+
+  .NavbarMenuNavLinkFooterLinks {
+    left: 42.7%;
+    top: 31.04%;
+    font-size: 2.42vw;
+  }
+
+  .NavLinkFooter a {
+    width: 15.91vw;
+  }
+
+  .NavbarMenuNavLinkFooterLinks a:visited {
+    color: black;
+  }
+
+  .NavbarMenuNavLinkFooterLinks {
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+  .Rules {
+    background-size: 29.52vw;
+    margin-left: 8%;
+  }
+
+  .RulesText {
+    font-size: 3.8vw;
+    left: 76.1%;
+    top: 4.04%;
+  }
+
+  .NavbarMenuNavLinkFooterRules {
+    left: 72%;
+    top: 31.04%;
+    font-size: 2vw;
+  }
+
+  .NavRuleFooter a {
+    width: 17.91vw;
+    text-align: start;
+  }
+
+  .Circle {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 118.53vw;
+    width: 33.3vw;
+    opacity: 100%;
+    transition: all 1.5s ease-in-out;
+  }
+  .Circle:checked {
+    opacity: 30%;
+    width: 15.3vw;
+  }
+
+  .Rectangle {
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    left: 82.63vw;
+    top: 110.31vw;
+    background: #be4c4c;
+    transform: rotate(28.03deg);
+    z-index: 1;
+    transition: all 1.5s ease-in-out;
+  }
+
+  .Rectangle:checked {
+    transform: rotate(79.03deg);
+  }
+
+  .Rectangle1 {
+    position: absolute;
+    width: 8.8vw;
+    height: 8.8vw;
+    left: 52.15vw;
+    top: 237.1vw;
+    background: #f85e5e;
+    transform: rotate(-32.38deg);
+    z-index: 1;
+  }
+}

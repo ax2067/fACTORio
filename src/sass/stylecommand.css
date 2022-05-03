@@ -1,0 +1,703 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row; }
+
+body {
+  font-family: "Cormorant", serif;
+  font-family: "Cormorant Garamond", serif; }
+
+.FooterMain {
+  grid-area: 1 / 1 / 2 / 6; }
+
+.Logo {
+  grid-area: 1 / 1 / 2 / 2;
+  margin: 5%;
+  opacity: 100%;
+  width: fit-content;
+  transition: all 1.5s ease-in-out;
+  width: 5vw; }
+
+.Logo:hover {
+  opacity: 80%; }
+
+.LogoName {
+  margin: 1.5vw 0vw 0vw -8vw;
+  font-size: 3.3vw; }
+
+.Navbar {
+  grid-area: 1 / 3 / 2 / 7;
+  font-size: 1.8vw; }
+
+@media screen and (min-width: 640px) {
+  .LinkOpened {
+    position: relative;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 0.21vw;
+    background-image: linear-gradient(90deg, #f06e6e, #f89d9d);
+    transition: background 0.5s ease-in-out; }
+
+  .LinkOpened:hover {
+    background-size: 100% 100px;
+    color: #000; }
+
+  .highlight {
+    position: relative;
+    background-image: linear-gradient(90deg, #f06e6e, #f89d9d);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    transition: background 0.5s ease-in-out; }
+
+  .highlight:hover {
+    background-size: 100% 2.41vw;
+    color: #000; } }
+@media screen and (max-width: 640px) {
+  .LinkOpened {
+    background-size: 100% auto;
+    color: #000; } }
+.NavbarMenuLinks {
+  list-style-type: none;
+  text-align: right;
+  width: 61.2vw;
+  position: absolute;
+  background-color: white; }
+
+.NavLink {
+  position: relative;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 0.21vw;
+  transition: background 0.5s ease-in-out;
+  display: inline;
+  margin-right: 0.5%; }
+
+a:link {
+  color: #000; }
+
+.NavLink:hover {
+  color: #000;
+  background-image: linear-gradient(90deg, #f06e6e, #f89d9d); }
+
+.MainContent {
+  grid-area: 2 / 1 / 2 / 7;
+  text-align: -webkit-center;
+  background-image: url("../../src/img/command.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 62.5%; }
+
+.MainTitle {
+  margin-bottom: -3%;
+  font-size: 10vw; }
+
+.Title {
+  margin: 0.5%;
+  font-size: 2vw;
+  width: 85vw;
+  border-top: 0.0625em solid; }
+
+.MainImage {
+  margin-top: 31%;
+  font-family: "Cormorant Garamond", serif;
+  width: max-content;
+  margin-bottom: 28%;
+  color: white;
+  text-align: start;
+  margin-left: -6%; }
+
+.MainText {
+  display: grid;
+  grid-template-columns: 0.6fr 1fr 0.6fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0.5% 0%;
+  grid-auto-flow: row;
+  grid-template-areas: "Teacher1 Teacher1 Teacher1" "Teacher2 Teacher2 Teacher2" "Teacher3 Teacher3 Teacher3";
+  margin: 0 5% 0 5%;
+  align-items: center; }
+
+.Teacher1 {
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr 0.8fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Teacher1Img Teacher1Text Teacher1Text" "Teacher1Img Teacher1Text Teacher1Text" "Teacher1Img Teacher1Text Teacher1Text";
+  grid-area: Teacher1;
+  width: 93vw;
+  margin-top: 3vw;
+  z-index: 2; }
+
+.Teacher1Img {
+  grid-area: Teacher1Img; }
+
+.Teacher1Text {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Teacher1TextTitle Teacher1TextTitle Teacher1TextTitle" ". . ." ". . .";
+  grid-area: Teacher1Text;
+  margin-left: 1.5vw; }
+
+.Teacher1TextTitle {
+  grid-area: Teacher1TextTitle;
+  height: max-content;
+  border-bottom: 0.25vw #7d3d3d solid;
+  width: 60vw; }
+
+.Text1 {
+  width: 63vw;
+  text-align: start;
+  height: max-content;
+  font-size: 2.2vw;
+  margin-top: -3.5vw; }
+
+.Teacher1TextTitle > p {
+  margin: 0;
+  font-size: 3.5vw;
+  text-align: start; }
+
+.Teacher2 {
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr 0.8fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Teacher2Text Teacher2Text Teacher2Img" "Teacher2Text Teacher2Text Teacher2Img" "Teacher2Text Teacher2Text Teacher2Img";
+  grid-area: Teacher2;
+  z-index: 2; }
+
+.Teacher2Img {
+  grid-area: Teacher2Img;
+  margin-right: 1vw; }
+
+.Teacher2Text {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Teacher2TextTitle Teacher2TextTitle Teacher2TextTitle" ". . ." ". . .";
+  grid-area: Teacher2Text;
+  margin-left: -1.5%; }
+
+.Teacher2TextTitle {
+  grid-area: Teacher2TextTitle;
+  height: max-content;
+  border-bottom: 0.25vw #7d3d3d solid;
+  width: 68vw; }
+
+.Teacher2TextTitle > p {
+  margin: 0;
+  text-align: end;
+  font-size: 3.5vw; }
+
+.Text2 {
+  width: 68vw;
+  text-align: end;
+  height: max-content;
+  font-size: 2.2vw;
+  margin-top: -5.5vw; }
+
+.Teacher3 {
+  display: grid;
+  grid-template-columns: 0.7fr 1.2fr 0.7fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Teacher3Img Teacher3Text Teacher3Text" "Teacher3Img Teacher3Text Teacher3Text" "Teacher3Img Teacher3Text Teacher3Text";
+  grid-area: Teacher3;
+  z-index: 2; }
+
+.Teacher3Img {
+  grid-area: Teacher3Img; }
+
+.Teacher3Text {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Teacher3TextTitle Teacher3TextTitle Teacher3TextTitle" ". . ." ". . .";
+  grid-area: Teacher3Text;
+  margin-left: 1.5%; }
+
+.Teacher3TextTitle {
+  grid-area: Teacher3TextTitle;
+  height: max-content;
+  border-bottom: 0.25vw #7d3d3d solid;
+  width: 60vw; }
+
+.Teacher3TextTitle > p {
+  margin: 0;
+  font-size: 3.5vw;
+  text-align: start; }
+
+.Text3 {
+  width: 67vw;
+  text-align: start;
+  height: max-content;
+  font-size: 2.2vw;
+  margin-top: -5.5vw; }
+
+.Upper {
+  font-size: 3.5vw; }
+
+.highlight {
+  position: relative;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 0.21vw;
+  background-image: linear-gradient(90deg, #f06e6e, #f89d9d);
+  transition: background 0.5s ease-in-out; }
+
+.highlight:hover {
+  background-size: 100% 5.11vw;
+  color: #000; }
+
+.Footer {
+  grid-area: 1 / 3 / 2 / 7;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0% 5%;
+  grid-auto-flow: row;
+  grid-template-areas: "Socials Links Rules";
+  background-image: url("../../src/img/footer.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 24.75vw;
+  position: absolute;
+  width: 100%;
+  top: 212.14vw;
+  z-index: 2;
+  left: 0; }
+
+.SocialsText {
+  position: absolute;
+  left: 12.6%;
+  right: 80.58%;
+  top: 14.04%;
+  bottom: 68.14%;
+  font-size: 1.8vw; }
+
+.Socials {
+  grid-area: Socials;
+  background-image: url("../../src/img/SocialsImage.svg");
+  background-size: 21.52vw;
+  background-repeat: no-repeat;
+  margin-left: 20%;
+  margin-top: 5%; }
+
+.SocialsImages {
+  display: inline-block;
+  width: 14.61vw;
+  position: absolute;
+  left: 7.6%;
+  right: 76.58%;
+  top: 22.04%;
+  bottom: 68.14%;
+  margin: 3%; }
+
+.Links {
+  grid-area: Links;
+  background-image: url("../../src/img/SocialsImage.svg");
+  background-size: 21.52vw;
+  background-repeat: no-repeat;
+  margin-left: 25%;
+  margin-top: 5%; }
+
+.LinksText {
+  position: absolute;
+  left: 49.2%;
+  right: 43.76%;
+  top: 14.04%;
+  bottom: 68.14%;
+  font-size: 1.8vw; }
+
+.NavbarMenuNavLinkFooterLinks {
+  padding: 0;
+  margin: 0.5%;
+  position: absolute;
+  left: 42.7%;
+  right: 43.76%;
+  top: 31.04%;
+  bottom: 68.14%;
+  font-size: 1.42vw;
+  display: block;
+  width: 10%; }
+
+.NavLinkFooter a {
+  display: inline-block;
+  text-decoration: none;
+  width: 18.91vw;
+  text-align: center;
+  margin: 0.5%; }
+
+.NavbarMenuNavLinkFooterLinks a:visited {
+  color: black; }
+
+.NavbarMenuNavLinkFooterLinks {
+  list-style-type: none;
+  text-decoration: none; }
+
+.Rules {
+  grid-area: Rules;
+  background-image: url("../../src/img/SocialsImage.svg");
+  background-size: 21.52vw;
+  background-repeat: no-repeat;
+  margin-left: 21%;
+  margin-top: 5%; }
+
+.RulesText {
+  position: absolute;
+  font-size: 1.8vw;
+  left: 83.1%;
+  right: 7.17%;
+  top: 14.04%;
+  bottom: 52.94%; }
+
+.NavbarMenuNavLinkFooterRules {
+  padding: 0;
+  margin: 0.5%;
+  position: absolute;
+  left: 77%;
+  right: 43.76%;
+  top: 31.04%;
+  bottom: 68.14%;
+  font-size: 1.42vw;
+  display: block;
+  width: 10%; }
+
+.NavRuleFooter a {
+  display: inline-block;
+  text-decoration: none;
+  width: 18.91vw;
+  text-align: center;
+  margin: 0.5%; }
+
+.NavbarMenuNavLinkFooterRules a:visited {
+  color: black; }
+
+.NavbarMenuNavLinkFooterRules {
+  list-style-type: none;
+  text-decoration: none; }
+
+#menu-mobile {
+  display: none; }
+
+.NavbarMenuLinks {
+  display: none;
+  padding: 0;
+  margin: 0; }
+
+.NavbarMenuLinks li {
+  font-size: 1.8vw;
+  display: block;
+  width: 100%; }
+
+.NavbarMenuLinks a {
+  display: block;
+  text-decoration: none;
+  font-size: 3.8vw; }
+
+.NavbarMenuLinks a:visited {
+  color: black; }
+
+.toggle-button {
+  display: block;
+  cursor: pointer;
+  font-size: 6.4vw;
+  text-align: right;
+  border-bottom: 1px #f06e6e solid; }
+
+#menu-mobile:checked + nav .NavbarMenuLinks {
+  display: block; }
+
+@media screen and (min-width: 640px) {
+  .toggle-button {
+    display: none; }
+
+  .NavbarMenuLinks {
+    display: block;
+    margin: 1.5%;
+    font-size: 3vw; }
+
+  .NavbarMenuLinks li {
+    width: auto;
+    display: inline-block; }
+
+  .NavbarMenuLinks a {
+    display: inline-block;
+    font-size: 1.82vw;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-bottom: 0; } }
+.Circle {
+  position: absolute;
+  left: 57vw;
+  top: 113.53vw;
+  width: 40.3vw;
+  opacity: 100%;
+  transition: all 1.5s ease-in-out;
+  z-index: 1; }
+
+.Circle:hover {
+  width: 45.51vw;
+  left: 51vw;
+  top: 119.53vw; }
+
+.Ellipse {
+  position: absolute;
+  width: 22vw;
+  left: 18.5vw;
+  top: 78.68vw;
+  z-index: 1;
+  transition: all 1.5s ease-in-out; }
+
+.Ellipse:hover {
+  filter: saturate(4); }
+
+.Rectangle1 {
+  position: absolute;
+  width: 20.51vw;
+  height: 20.51vw;
+  left: 22.15vw;
+  top: 163vw;
+  background: rgba(242, 213, 213, 0.75);
+  transform: rotate(28.03deg);
+  z-index: 1;
+  transition: all 2.5s ease; }
+
+.Rectangle1:hover {
+  width: 25.51vw;
+  height: 25.51vw;
+  transform: rotate(79.03deg); }
+
+@media screen and (max-width: 580px) {
+  .LogoName {
+    margin: 2.5vw 0vw 0vw -4vw;
+    font-size: 5.3vw; }
+
+  .Logo {
+    width: 8vw; }
+
+  .Navbar {
+    font-size: 1.8vw; }
+
+  .MainContent {
+    background-size: 124%; }
+
+  .MainTitle {
+    font-size: 10.5vw; }
+
+  .MainImage {
+    margin-bottom: 27%;
+    margin-top: 46%; }
+
+  .Upper {
+    font-size: 7.25vw; }
+
+  .Title {
+    margin: 0.15%;
+    font-size: 3.3vw;
+    width: 89vw; }
+
+  .Teacher1 {
+    display: block;
+    width: 93vw;
+    margin-top: 4vw;
+    z-index: 2;
+    margin-bottom: 16vw; }
+
+  .Teacher1Img {
+    width: 42vw;
+    float: left; }
+
+  .Teacher1Text {
+    display: block;
+    margin-left: 1.5vw; }
+
+  .Teacher1TextTitle {
+    width: auto; }
+
+  .Text1 {
+    width: auto;
+    height: 11vw;
+    font-size: 4.2vw;
+    margin-top: 1.5vw; }
+
+  .Teacher1TextTitle > p {
+    font-size: 5.5vw; }
+
+  .Teacher2 {
+    display: block;
+    width: 93vw;
+    margin-top: 4vw;
+    z-index: 2; }
+
+  .Teacher2Img {
+    width: 42vw;
+    float: left; }
+
+  .Teacher2Text {
+    display: block;
+    margin-left: 1.5vw;
+    margin-left: -1.5%; }
+
+  .Teacher2TextTitle {
+    width: 87vw; }
+
+  .Teacher2TextTitle > p {
+    font-size: 5.5vw;
+    text-align: left; }
+
+  .Text2 {
+    width: auto;
+    height: 11vw;
+    font-size: 4.2vw;
+    margin-top: 1.5vw;
+    text-align: start; }
+
+  .Teacher3 {
+    display: block;
+    width: 93vw;
+    margin-top: 4vw;
+    z-index: 2;
+    margin-top: 28vw; }
+
+  .Teacher3Img {
+    width: 42vw;
+    float: left; }
+
+  .Teacher3Text {
+    display: block;
+    margin-left: 1.5vw;
+    margin-left: -1.5%; }
+
+  .Teacher3TextTitle {
+    width: 87vw; }
+
+  .Teacher3TextTitle > p {
+    font-size: 5.5vw; }
+
+  .Text3 {
+    width: auto;
+    height: 11vw;
+    font-size: 4.2vw;
+    margin-top: 1.5vw; }
+
+  .Upper {
+    font-size: 6.5vw; }
+
+  .Footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0% 0.5%;
+    height: 32.75vw;
+    top: 400.14vw;
+    left: 0; }
+
+  .SocialsText {
+    left: 8.4%;
+    top: 4.04%;
+    font-size: 3.8vw; }
+
+  .Socials {
+    background-size: 29.52vw;
+    margin-left: 8%; }
+
+  .SocialsImages {
+    width: 21.61vw;
+    left: 4.6%;
+    top: 25.04%; }
+
+  .Links {
+    background-size: 29.52vw;
+    margin-left: 8%; }
+
+  .LinksText {
+    left: 43.2%;
+    top: 4.04%;
+    font-size: 3.8vw; }
+
+  .NavbarMenuNavLinkFooterLinks {
+    left: 42.7%;
+    top: 31.04%;
+    font-size: 2.42vw; }
+
+  .NavLinkFooter a {
+    width: 15.91vw; }
+
+  .NavbarMenuNavLinkFooterLinks a:visited {
+    color: black; }
+
+  .NavbarMenuNavLinkFooterLinks {
+    list-style-type: none;
+    text-decoration: none; }
+
+  .Rules {
+    background-size: 29.52vw;
+    margin-left: 8%; }
+
+  .RulesText {
+    font-size: 3.8vw;
+    left: 76.1%;
+    top: 4.04%; }
+
+  .NavbarMenuNavLinkFooterRules {
+    left: 72%;
+    top: 31.04%;
+    font-size: 2vw; }
+
+  .NavRuleFooter a {
+    width: 17.91vw;
+    text-align: start; }
+
+  .Circle {
+    position: absolute;
+    left: 6vw;
+    top: 197.53vw;
+    width: 91.3vw;
+    opacity: 100%;
+    transition: all 1.5s ease-in-out;
+    z-index: 1; }
+
+  .Circle:hover {
+    width: 45.51vw;
+    left: 43vw;
+    top: 208.53vw; }
+
+  .Ellipse {
+    position: absolute;
+    width: 40vw;
+    left: 36.5vw;
+    top: 99.68vw;
+    z-index: 1;
+    transition: all 1.5s ease-in-out; }
+
+  .Ellipse:hover {
+    filter: saturate(4); }
+
+  .Rectangle1 {
+    position: absolute;
+    width: 38.51vw;
+    height: 38.51vw;
+    left: 37.15vw;
+    top: 309vw;
+    background: rgba(242, 213, 213, 0.75);
+    transform: rotate(28.03deg);
+    z-index: 1;
+    transition: all 2.5s ease; }
+
+  .Rectangle1:hover {
+    width: 25.51vw;
+    height: 25.51vw;
+    transform: rotate(79.03deg); } }
+
+/*# sourceMappingURL=stylecommand.css.map */

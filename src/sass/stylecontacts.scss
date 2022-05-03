@@ -1,0 +1,766 @@
+@mixin index {
+  z-index: 3;
+  margin-right: 7%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}
+
+body {
+  font-family: "Cormorant", serif;
+  font-family: "Cormorant Garamond", serif;
+}
+.FooterMain {
+  grid-area: 1 / 1 / 2 / 6;
+}
+
+.Logo {
+  grid-area: 1 / 1 / 2 / 2;
+  margin: 5%;
+  opacity: 100%;
+  width: fit-content;
+  transition: all 1.5s ease-in-out;
+  width: 5vw;
+}
+
+.Logo:hover {
+  opacity: 80%;
+}
+
+.LogoName{
+margin: 1.5vw 0vw 0vw -8vw;
+    font-size: 3.3vw;
+}
+
+.Navbar {
+  grid-area: 1 / 3 / 2 / 7;
+  font-size: 1.8vw;
+}
+
+@media screen and (min-width: 640px) {
+  .LinkOpened {
+    position: relative;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 0.21vw;
+    background-image: linear-gradient(90deg, #f06e6e, #f89d9d);
+    transition: background 0.5s ease-in-out;
+  }
+  .LinkOpened:hover {
+    background-size: 100% 100px;
+    color: #000;
+  }
+
+  .highlight {
+    position: relative;
+    background-image: linear-gradient(90deg, #f06e6e, #f89d9d);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    transition: background 0.5s ease-in-out;
+  }
+
+  .highlight:hover {
+    background-size: 100% 2.41vw;
+    color: #000;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .LinkOpened {
+    background-size: 100% auto;
+    color: #000;
+  }
+}
+
+.NavbarMenuLinks {
+  list-style-type: none;
+  text-align: right;
+  width: 61.2vw;
+  position: absolute;
+  background-color: white;
+}
+
+.NavLink {
+  position: relative;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 0.21vw;
+  transition: background 0.5s ease-in-out;
+  display: inline;
+  margin-right: 0.5%;
+}
+a:link {
+  color: #000;
+}
+.NavLink:hover {
+  color: #000;
+  background-image: linear-gradient(90deg, #f06e6e, #f89d9d);
+}
+
+.MainContent {
+  grid-area: 2 / 1 / 2 / 7;
+  text-align: -webkit-center;
+  background-image: url("../../src/img/contacts.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 62.5%;
+}
+
+.MainTitle {
+  margin-bottom: -5%;
+  font-size: 10vw;
+}
+
+.Title {
+  margin: 0.5%;
+  font-size: 2vw;
+  width: 41vw;
+  border-top: 0.0625em solid;
+}
+
+.MainImage {
+  margin-top: 29%;
+  font-family: "Cormorant Garamond", serif;
+  width: max-content;
+  margin-bottom: 28%;
+  color: white;
+  text-align: start;
+  margin-left: -34%;
+}
+
+.MainText {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5% 0%;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Form Form . Online"
+    "Telephone Telephone Email Email";
+  margin: 0 5% 0 5%;
+  align-items: center;
+  li:first-child {
+    border-top: 0.21vw solid #c16b6b;
+  }
+}
+
+.MainTextTitle {
+  font-size: 3.2vw;
+  margin: 0.25%;
+  z-index: 3;
+}
+
+.Form {
+  grid-area: Form;
+  @include index;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #fef6f6;
+  input {
+    font-family: "Cormorant", serif;
+    font-size: 1.25vw;
+  }
+  button {
+    background-color: #fccfcf;
+    font-family: "Cormorant Garamond", serif;
+    border: none;
+    width: 12vw;
+    font-size: 1.8vw;
+  }
+}
+
+input:focus,
+textarea:focus {
+  background-color: #e7d6d6;
+}
+
+.Courses {
+  font-size: 1.25vw;
+  text-align: left;
+  width: 27vw;
+  display: block;
+  border: none;
+}
+
+.label {
+  display: block;
+  font-size: 2vw;
+  text-align: left;
+  width: 27vw;
+}
+
+textarea {
+  width: 26vw;
+  height: 12vw;
+  border: none;
+  font-family: "Cormorant", serif;
+  font-size: 1.25vw;
+  background-color: #f3e7e7;
+}
+
+.block {
+  width: 26vw;
+  height: 2vw;
+  border: none;
+  background-color: #f3e7e7;
+}
+
+.Online {
+  grid-area: Online;
+  @include index;
+  font-size: 3.65vw;
+}
+
+.Telephone {
+  grid-area: Telephone;
+  @include index;
+  margin-bottom: 29vw;
+}
+
+.Email {
+  grid-area: Email;
+  @include index;
+  margin-bottom: 41vw;
+}
+
+.TelephoneNumberMenu {
+  list-style-type: none;
+  text-align: left;
+  font-size: 2.2vw;
+}
+
+.EmailTitle,
+.TelephoneTitle {
+  font-size: 2.6vw;
+}
+
+.EmailMenu {
+  list-style-type: none;
+  text-align: left;
+  font-size: 2.3vw;
+}
+
+.Number {
+  font-size: 2.6vw;
+}
+
+.Footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0% 5%;
+  grid-auto-flow: row;
+  grid-template-areas: "Socials Links Rules";
+  background-image: url("../../src/img/footer.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 24.75vw;
+  position: absolute;
+  width: 100%;
+  top: 164.14vw;
+  z-index: 2;
+  left: 0;
+}
+
+.SocialsText {
+  position: absolute;
+  left: 12.6%;
+  right: 80.58%;
+  top: 14.04%;
+  bottom: 68.14%;
+  font-size: 1.8vw;
+}
+.Socials {
+  grid-area: Socials;
+  background-image: url("../../src/img/SocialsImage.svg");
+  background-size: 21.52vw;
+  background-repeat: no-repeat;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.SocialsImages {
+  display: inline-block;
+  width: 14.61vw;
+  position: absolute;
+  left: 7.6%;
+  right: 76.58%;
+  top: 22.04%;
+  bottom: 68.14%;
+  margin: 3%;
+}
+
+.Links {
+  grid-area: Links;
+  background-image: url("../../src/img/SocialsImage.svg");
+  background-size: 21.52vw;
+  background-repeat: no-repeat;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+.LinksText {
+  position: absolute;
+  left: 49.2%;
+  right: 43.76%;
+  top: 14.04%;
+  bottom: 68.14%;
+  font-size: 1.8vw;
+}
+
+.NavbarMenuNavLinkFooterLinks {
+  padding: 0;
+  margin: 0.5%;
+  position: absolute;
+  left: 42.7%;
+  right: 43.76%;
+  top: 31.04%;
+  bottom: 68.14%;
+  font-size: 1.42vw;
+  display: block;
+  width: 10%;
+}
+
+.NavLinkFooter a {
+  display: inline-block;
+  text-decoration: none;
+  width: 18.91vw;
+  text-align: center;
+  margin: 0.5%;
+}
+
+.NavbarMenuNavLinkFooterLinks a:visited {
+  color: black;
+}
+
+.NavbarMenuNavLinkFooterLinks {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.Rules {
+  grid-area: Rules;
+  background-image: url("../../src/img/SocialsImage.svg");
+  background-size: 21.52vw;
+  background-repeat: no-repeat;
+  margin-left: 21%;
+  margin-top: 5%;
+}
+
+.RulesText {
+  position: absolute;
+  font-size: 1.8vw;
+  left: 83.1%;
+  right: 7.17%;
+  top: 14.04%;
+  bottom: 52.94%;
+}
+
+.NavbarMenuNavLinkFooterRules {
+  padding: 0;
+  margin: 0.5%;
+  position: absolute;
+  left: 77%;
+  right: 43.76%;
+  top: 31.04%;
+  bottom: 68.14%;
+  font-size: 1.42vw;
+  display: block;
+  width: 10%;
+}
+
+.NavRuleFooter a {
+  display: inline-block;
+  text-decoration: none;
+  width: 18.91vw;
+  text-align: center;
+  margin: 0.5%;
+}
+
+.NavbarMenuNavLinkFooterRules a:visited {
+  color: black;
+}
+
+.NavbarMenuNavLinkFooterRules {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+#menu-mobile {
+  display: none;
+}
+
+.NavbarMenuLinks {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.NavbarMenuLinks li {
+  font-size: 1.8vw;
+  display: block;
+  width: 100%;
+}
+
+.NavbarMenuLinks a {
+  display: block;
+  text-decoration: none;
+  font-size: 3.8vw;
+}
+
+.NavbarMenuLinks a:visited {
+  color: black;
+}
+
+.toggle-button {
+  display: block;
+  cursor: pointer;
+  font-size: 6.4vw;
+  text-align: right;
+  border-bottom: 1px #f06e6e solid;
+}
+
+#menu-mobile:checked + nav .NavbarMenuLinks {
+  display: block;
+}
+
+@media screen and (min-width: 640px) {
+  .toggle-button {
+    display: none;
+  }
+  .NavbarMenuLinks {
+    display: block;
+    margin: 1.5%;
+    font-size: 3vw;
+  }
+
+  .NavbarMenuLinks li {
+    width: auto;
+    display: inline-block;
+  }
+
+  .NavbarMenuLinks a {
+    display: inline-block;
+    font-size: 1.82vw;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-bottom: 0;
+  }
+}
+
+.Circle {
+  position: absolute;
+  left: 0vw;
+  top: 114.53vw;
+  width: 26.3vw;
+  opacity: 95%;
+  transition: all 1.5s ease-in-out;
+  z-index: 1;
+}
+
+.Circle:hover {
+  width: 15.51vw;
+  height: 15.51vw;
+}
+
+.Ellipse {
+  position: absolute;
+  width: 22vw;
+  left: 69.5vw;
+  top: 86.68vw;
+  z-index: 1;
+  transition: all 1.5s ease-in-out;
+  opacity: 75%;
+}
+
+.Ellipse:hover {
+  opacity: 55%;
+}
+
+.Rectangle {
+  position: absolute;
+  width: 11vw;
+  height: 11vw;
+  right: 26vw;
+  top: 103vw;
+
+  background: rgba(223, 33, 33, 0.75);
+  transform: rotate(13.46deg);
+  transition: all 1.5s ease-in-out;
+}
+
+.Rectangle:hover {
+  transform: rotate(113.46deg);
+  background: #a70000;
+}
+
+.Square {
+  position: absolute;
+  width: 33vw;
+  right: 0;
+  top: 121.68vw;
+  z-index: 1;
+  transition: all 1.5s ease-in-out;
+  opacity: 75%;
+}
+.Square:hover {
+  filter: saturate(4);
+}
+@media screen and (max-width: 580px) {
+
+  .LogoName{
+    margin: 2.5vw 0vw 0vw -4vw;
+    font-size: 5.3vw;
+    }
+
+  .Logo {
+    width: 8vw;
+  }
+
+  .Navbar {
+    font-size: 1.8vw;
+  }
+
+  .MainContent {
+    background-size: 124%;
+  }
+
+  .MainTitle {
+    font-size: 14vw;
+    margin: -0.985%;
+  }
+
+  .MainImage {
+    margin-bottom: 19%;
+    margin-top: 46%;
+    margin-left: -13%;
+  }
+
+  .Title {
+    margin: 0.15%;
+    font-size: 3.3vw;
+    width: 42vw;
+  }
+
+  .MainText {
+    display: block;
+    margin: 0 5% 0 5%;
+    align-items: center;
+    li:first-child {
+      border-top: 0.21vw solid #c16b6b;
+    }
+  }
+
+  .MainTextTitle {
+    font-size: 6.5vw;
+    margin: 0.25%;
+    z-index: 3;
+  }
+
+  .Number {
+    font-size: 5.6vw;
+  }
+  .MainText {
+    display: block;
+  }
+
+  .MainTextTitle {
+    font-size: 3.2vw;
+    margin: 0.25%;
+    z-index: 3;
+  }
+
+  .Form {
+    height: 130vw;
+
+    input {
+      font-size: 3.25vw;
+    }
+  }
+
+  button {
+    width: 25vw;
+    font-size: 3.8vw;
+  }
+
+  input:focus,
+  textarea:focus {
+    background-color: #e7d6d6;
+  }
+
+  .Courses {
+    font-size: 3.25vw;
+    width: 75vw;
+  }
+
+  .label {
+    font-size: 6vw;
+    width: 74vw;
+  }
+
+  textarea {
+    width: 74vw;
+    height: 21vw;
+    font-size: 3.25vw;
+  }
+
+  .block {
+    width: 74vw;
+    height: 6vw;
+    border: none;
+    background-color: #f3e7e7;
+  }
+
+  .Online {
+    font-size: 4.65vw;
+  }
+
+  .Telephone {
+ 
+      margin-bottom: 0vw;
+  }
+
+  .Email {
+ 
+    margin-bottom: 0vw;
+  }
+
+  .TelephoneNumberMenu {
+    font-size: 3.2vw;
+  }
+
+  .EmailTitle,
+  .TelephoneTitle {
+    font-size: 4.6vw;
+  }
+
+  .EmailMenu {
+    font-size: 4.3vw;
+  }
+.Form button {
+    width: 26vw;
+    font-size: 3.8vw;
+}
+  .Footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0% 0.5%;
+    height: 32.75vw;
+    top: 304.14vw;
+    left: 0;
+  }
+
+  .SocialsText {
+    left: 8.4%;
+    top: 4.04%;
+    font-size: 3.8vw;
+  }
+  .Socials {
+    background-size: 29.52vw;
+    margin-left: 8%;
+  }
+
+  .SocialsImages {
+    width: 21.61vw;
+    left: 4.6%;
+    top: 25.04%;
+  }
+
+  .Links {
+    background-size: 29.52vw;
+    margin-left: 8%;
+  }
+
+  .LinksText {
+    left: 43.2%;
+    top: 4.04%;
+    font-size: 3.8vw;
+  }
+
+  .NavbarMenuNavLinkFooterLinks {
+    left: 42.7%;
+    top: 31.04%;
+    font-size: 2.42vw;
+  }
+
+  .NavLinkFooter a {
+    width: 15.91vw;
+  }
+
+  .NavbarMenuNavLinkFooterLinks a:visited {
+    color: black;
+  }
+
+  .NavbarMenuNavLinkFooterLinks {
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+  .Rules {
+    background-size: 29.52vw;
+    margin-left: 8%;
+  }
+
+  .RulesText {
+    font-size: 3.8vw;
+    left: 76.1%;
+    top: 4.04%;
+  }
+
+  .NavbarMenuNavLinkFooterRules {
+    left: 72%;
+    top: 31.04%;
+    font-size: 2vw;
+  }
+
+  .NavRuleFooter a {
+    width: 17.91vw;
+    text-align: start;
+  }
+
+  .Circle {
+    top: 240.53vw;
+    z-index: -11;
+  }
+
+  .Circle:hover {
+    width: 15.51vw;
+    height: 15.51vw;
+  }
+
+  .Ellipse {
+    width: 27vw;
+    z-index: -15;
+  }
+
+  .Ellipse:hover {
+    opacity: 55%;
+  }
+
+  .Rectangle {
+    top: 208.53vw;
+    left: 75vw;
+    width: 20vw;
+    height: 20vw;
+    z-index: -9;
+  }
+
+  .Rectangle:hover {
+    transform: rotate(113.46deg);
+    background: #a70000;
+  }
+
+  .Square {
+    top: 253.68vw;
+    z-index: -11;
+  }
+
+  .Square:hover {
+    opacity: 55%;
+  }
+}

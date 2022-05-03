@@ -1,0 +1,710 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}
+
+body {
+  font-family: "Cormorant", serif;
+  font-family: "Cormorant Garamond", serif;
+}
+.FooterMain {
+  grid-area: 1 / 1 / 2 / 6;
+}
+
+.Logo {
+  grid-area: 1 / 1 / 2 / 2;
+  margin: 5%;
+  opacity: 100%;
+  width: fit-content;
+  transition: all 1.5s ease-in-out;
+  width: 5vw;
+}
+
+.LogoName{
+margin: 1.5vw 0vw 0vw -8vw;
+    font-size: 3.3vw;
+}
+
+.Logo:hover {
+  opacity: 80%;
+}
+
+.Navbar {
+  grid-area: 1 / 3 / 2 / 7;
+  font-size: 1.8vw;
+}
+
+@media screen and (min-width: 640px) {
+  .LinkOpened {
+    position: relative;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 0.21vw;
+    background-image: linear-gradient(90deg, #f06e6e, #f89d9d);
+    transition: background 0.5s ease-in-out;
+  }
+  .LinkOpened:hover {
+    background-size: 100% 100px;
+    color: #000;
+  }
+
+  .highlight {
+    position: relative;
+    background-image: linear-gradient(90deg, #f06e6e, #f89d9d);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    transition: background 0.5s ease-in-out;
+  }
+
+  .highlight:hover {
+    background-size: 100% 2.41vw;
+    color: #000;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .LinkOpened {
+    background-size: 100% auto;
+    color: #000;
+  }
+}
+
+.NavbarMenuLinks {
+  list-style-type: none;
+  text-align: right;
+  width: 61.2vw;
+  position: absolute;
+  background-color: white;
+}
+
+.NavLink {
+  position: relative;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 0.21vw;
+  transition: background 0.5s ease-in-out;
+  display: inline;
+  margin-right: 0.5%;
+}
+a:link {
+  color: #000;
+}
+.NavLink:hover {
+  color: #000;
+  background-image: linear-gradient(90deg, #f06e6e, #f89d9d);
+}
+
+.MainContent {
+  grid-area: 2 / 1 / 2 / 7;
+  text-align: -webkit-center;
+  background-image: url("../../src/img/courses.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 62.5%;
+}
+
+.MainTitle {
+  margin-bottom: -3%;
+  font-size: 10vw;
+}
+
+.Title {
+  margin: 0.5%;
+  font-size: 2vw;
+  width: 50vw;
+  border-top: 0.0625em solid;
+}
+
+.MainImage {
+  margin-top: 31%;
+  font-family: "Cormorant Garamond", serif;
+  width: max-content;
+  margin-bottom: 28%;
+  color: white;
+  text-align: start;
+  margin-left: -37%;
+}
+
+.MainText {
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr 0.8fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0% 0%;
+  grid-auto-flow: row;
+}
+
+.CoursesForKids {
+  grid-area: 1 / 1 / 2 / 4;
+  z-index: 2;
+}
+.Text1 {
+  width: 63vw;
+  text-align: start;
+  height: max-content;
+  font-size: 2.2vw;
+  margin-top: -0.5vw;
+  margin-right: 26vw;
+  z-index: 2;
+}
+
+.CoursesForKidsTextTitle {
+  font-size: 3.5vw;
+  width: max-content;
+  border-bottom: 0.25vw #7d3d3d solid;
+  z-index: 2;
+}
+.CoursesForKidsTextTitle > p {
+  margin: 0;
+}
+
+.CoursesForKidsImg {
+  grid-area: 1 / 3 / 2 / 4;
+  width: 25vw;
+  position: absolute;
+  top: 81vw;
+  right: 5vw;
+  z-index: 2;
+}
+
+.CoursesForAdults {
+  grid-area: 2 / 1 / 3 / 4;
+  z-index: 2;
+}
+
+.CoursesForAdultsTextTitle {
+  font-size: 3.5vw;
+  position: absolute;
+  top: 111vw;
+  left: 20vw;
+  border-bottom: 0.25vw #7d3d3d solid;
+  z-index: 2;
+}
+
+.CoursesForAdultsTextTitle > p {
+  margin: 0;
+}
+
+.Text2 {
+  width: 63vw;
+  text-align: end;
+  height: max-content;
+  font-size: 2.2vw;
+  margin-top: -28.5vw;
+  margin-left: 28vw;
+  z-index: 2;
+}
+
+.CoursesForAdultsImg {
+  position: absolute;
+  top: 116vw;
+  left: 5vw;
+  grid-area: 2 / 1 / 3 / 2;
+  width: 25vw;
+  z-index: 2;
+}
+
+.CourseProfession {
+  z-index: 2;
+  grid-area: 3 / 1 / 4 / 4;
+}
+
+.CourseProfessionTextTitle {
+  font-size: 3.5vw;
+  position: absolute;
+  top: 145vw;
+  left: 20vw;
+  border-bottom: 0.25vw #7d3d3d solid;
+  z-index: 2;
+}
+
+.Text3 {
+  width: 62vw;
+  text-align: start;
+  height: max-content;
+  font-size: 2.2vw;
+  margin-top: 13.5vw;
+  margin-left: 4vw;
+  z-index: 2;
+}
+
+.CourseProfessionTextTitle > p {
+  margin: 0;
+  z-index: 2;
+}
+
+.CourseProfessionImg {
+  position: absolute;
+  top: 150vw;
+  right: 7vw;
+  grid-area: 3 / 3 / 4 / 4;
+  width: 25vw;
+  z-index: 2;
+}
+
+.Upper {
+  font-size: 3.5vw;
+}
+
+.highlight {
+  position: relative;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 0.21vw;
+  background-image: linear-gradient(90deg, #f06e6e, #f89d9d);
+  transition: background 0.5s ease-in-out;
+}
+
+.highlight:hover {
+  background-size: 100% 5.11vw;
+  color: #000;
+}
+
+.Footer {
+  grid-area: 1 / 3 / 2 / 7;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0% 5%;
+  grid-auto-flow: row;
+  grid-template-areas: "Socials Links Rules";
+  background-image: url("../../src/img/footer.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 24.75vw;
+  position: absolute;
+  width: 100%;
+  top: 186.14vw;
+  z-index: 2;
+  left: 0;
+}
+
+.SocialsText {
+  position: absolute;
+  left: 12.6%;
+  right: 80.58%;
+  top: 14.04%;
+  bottom: 68.14%;
+  font-size: 1.8vw;
+}
+.Socials {
+  grid-area: Socials;
+  background-image: url("../../src/img/SocialsImage.svg");
+  background-size: 21.52vw;
+  background-repeat: no-repeat;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.SocialsImages {
+  display: inline-block;
+  width: 14.61vw;
+  position: absolute;
+  left: 7.6%;
+  right: 76.58%;
+  top: 22.04%;
+  bottom: 68.14%;
+  margin: 3%;
+}
+
+.Links {
+  grid-area: Links;
+  background-image: url("../../src/img/SocialsImage.svg");
+  background-size: 21.52vw;
+  background-repeat: no-repeat;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+.LinksText {
+  position: absolute;
+  left: 49.2%;
+  right: 43.76%;
+  top: 14.04%;
+  bottom: 68.14%;
+  font-size: 1.8vw;
+}
+
+.NavbarMenuNavLinkFooterLinks {
+  padding: 0;
+  margin: 0.5%;
+  position: absolute;
+  left: 42.7%;
+  right: 43.76%;
+  top: 31.04%;
+  bottom: 68.14%;
+  font-size: 1.42vw;
+  display: block;
+  width: 10%;
+}
+
+.NavLinkFooter a {
+  display: inline-block;
+  text-decoration: none;
+  width: 18.91vw;
+  text-align: center;
+  margin: 0.5%;
+}
+
+.NavbarMenuNavLinkFooterLinks a:visited {
+  color: black;
+}
+
+.NavbarMenuNavLinkFooterLinks {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.Rules {
+  grid-area: Rules;
+  background-image: url("../../src/img/SocialsImage.svg");
+  background-size: 21.52vw;
+  background-repeat: no-repeat;
+  margin-left: 21%;
+  margin-top: 5%;
+}
+
+.RulesText {
+  position: absolute;
+  font-size: 1.8vw;
+  left: 83.1%;
+  right: 7.17%;
+  top: 14.04%;
+  bottom: 52.94%;
+}
+
+.NavbarMenuNavLinkFooterRules {
+  padding: 0;
+  margin: 0.5%;
+  position: absolute;
+  left: 77%;
+  right: 43.76%;
+  top: 31.04%;
+  bottom: 68.14%;
+  font-size: 1.42vw;
+  display: block;
+  width: 10%;
+}
+
+.NavRuleFooter a {
+  display: inline-block;
+  text-decoration: none;
+  width: 18.91vw;
+  text-align: center;
+  margin: 0.5%;
+}
+
+.NavbarMenuNavLinkFooterRules a:visited {
+  color: black;
+}
+
+.NavbarMenuNavLinkFooterRules {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+#menu-mobile {
+  display: none;
+}
+
+.NavbarMenuLinks {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.NavbarMenuLinks li {
+  font-size: 1.8vw;
+  display: block;
+  width: 100%;
+}
+
+.NavbarMenuLinks a {
+  display: block;
+  text-decoration: none;
+  font-size: 3.8vw;
+}
+
+.NavbarMenuLinks a:visited {
+  color: black;
+}
+
+.toggle-button {
+  display: block;
+  cursor: pointer;
+  font-size: 6.4vw;
+  text-align: right;
+  border-bottom: 1px #f06e6e solid;
+}
+
+#menu-mobile:checked + nav .NavbarMenuLinks {
+  display: block;
+}
+
+@media screen and (min-width: 640px) {
+
+
+  .toggle-button {
+    display: none;
+  }
+  .NavbarMenuLinks {
+    display: block;
+    margin: 1.5%;
+    font-size: 3vw;
+  }
+
+  .NavbarMenuLinks li {
+    width: auto;
+    display: inline-block;
+  }
+  .NavbarMenuLinks a {
+    display: inline-block;
+    font-size: 1.82vw;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-bottom: 0;
+  }
+}
+
+.Rectangle1 {
+  position: absolute;
+  left: 0;
+  top: 88.53vw;
+  width: 40.3vw;
+  opacity: 100%;
+  transition: all 1.5s ease-in-out;
+  z-index: 0;
+}
+
+.Rectangle1:hover {
+  filter: saturate(4);
+}
+
+.Rectangle2 {
+  position: absolute;
+  width: 7.51vw;
+  height: 7.51vw;
+  left: 66vw;
+  top: 99vw;
+  background: #f6c3c3;
+  transform: rotate(16deg);
+  z-index: 0;
+  transition: all 2.5s ease-in-out;
+}
+
+.Rectangle2:hover {
+  width: 10.51vw;
+  height: 10.51vw;
+  transform: rotate(79.03deg);
+}
+
+.Rectangle3 {
+  position: absolute;
+  width: 22.51vw;
+  height: 22.51vw;
+  left: 59vw;
+  top: 141vw;
+  background: rgba(242, 213, 213, 0.75);
+  transform: rotate(34deg);
+  z-index: -1;
+  transition: all 2.5s ease-in-out;
+}
+
+@media screen and (max-width: 580px) {
+
+  .LogoName{
+    margin: 2.5vw 0vw 0vw -4vw;
+    font-size: 5.3vw;
+    }
+
+  .Logo {
+    width: 8vw;
+  }
+
+  .Navbar {
+    font-size: 1.8vw;
+  }
+
+  .MainContent {
+    background-size: 124%;
+  }
+
+  .MainTitle {
+    font-size: 14vw;
+  }
+
+  .MainImage {
+    margin-bottom: 27%;
+    margin-top: 46%;
+    margin-left: -9%;
+  }
+
+  .Title {
+    margin: 0.15%;
+    font-size: 3.3vw;
+    width: 77vw;
+  }
+
+  .Upper {
+    font-size: 6.5vw;
+  }
+
+  .Footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0% 0.5%;
+    height: 32.75vw;
+    top: 395.14vw;
+    left: 0;
+  }
+
+  .CoursesForKidsTextTitle {
+    font-size: 5.5vw;
+    width: revert;
+  }
+
+  .Text1 {
+    width: 60vw;
+    font-size: 4.2vw;
+    margin-top: -0.5vw;
+    margin-right: 26vw;
+  }
+
+  .CoursesForKidsImg {
+    width: 38vw;
+    top: 113vw;
+    right: 3vw;
+  }
+
+  .CourseProfessionTextTitle {
+    font-size: 5.5vw;
+    top: 285vw;
+    left: 3vw;
+    width: fit-content;
+  }
+
+  .CoursesForAdultsTextTitle {
+    font-size: 5.5vw;
+    top: 189vw;
+    left: 2vw;
+    width: initial;
+  }
+
+  .Text2 {
+    width: 60vw;
+    font-size: 4.2vw;
+    margin-top: -109.5vw;
+    margin-left: 28vw;
+  }
+
+  .CourseProfessionImg {
+    top: 322vw;
+    left: 59vw;
+    width: 38vw;
+  }
+
+  .CoursesForAdultsImg {
+    top: 208vw;
+    left: 2vw;
+    width: 38vw;
+  }
+
+  .Text3 {
+    width: 56vw;
+
+    font-size: 4.2vw;
+    margin-top: 21.5vw;
+    margin-left: 4vw;
+  }
+
+  .SocialsText {
+    left: 8.4%;
+    top: 4.04%;
+    font-size: 3.8vw;
+  }
+  .Socials {
+    background-size: 29.52vw;
+    margin-left: 8%;
+  }
+
+  .SocialsImages {
+    width: 21.61vw;
+    left: 4.6%;
+    top: 25.04%;
+  }
+
+  .Links {
+    background-size: 29.52vw;
+    margin-left: 8%;
+  }
+
+  .LinksText {
+    left: 43.2%;
+    top: 4.04%;
+    font-size: 3.8vw;
+  }
+
+  .NavbarMenuNavLinkFooterLinks {
+    left: 42.7%;
+    top: 31.04%;
+    font-size: 2.42vw;
+  }
+
+  .NavLinkFooter a {
+    width: 15.91vw;
+  }
+
+  .NavbarMenuNavLinkFooterLinks a:visited {
+    color: black;
+  }
+
+  .NavbarMenuNavLinkFooterLinks {
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+  .Rules {
+    background-size: 29.52vw;
+    margin-left: 8%;
+  }
+
+  .RulesText {
+    font-size: 3.8vw;
+    left: 76.1%;
+    top: 4.04%;
+  }
+
+  .NavbarMenuNavLinkFooterRules {
+    left: 72%;
+    top: 31.04%;
+    font-size: 2vw;
+  }
+
+  .NavRuleFooter a {
+    width: 17.91vw;
+    text-align: start;
+  }
+
+  .Rectangle1 {
+    top: 174.53vw;
+    width: 55.3vw;
+    z-index: -1;
+  }
+
+  .Rectangle2 {
+    width: 15.51vw;
+    height: 15.51vw;
+    left: 55vw;
+    top: 149vw;
+  }
+
+  .Rectangle3 {
+    width: 45.51vw;
+    height: 45.51vw;
+    left: 40vw;
+    top: 301vw;
+  }
+}

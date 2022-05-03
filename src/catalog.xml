@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PriceList>
+<PriceListColumn>
+<NamePurpose>КУРС ДЛЯ ДЕТЕЙ</NamePurpose>
+<Weeks>8 ПРАКТИЧЕСКИХ НЕДЕЛЬ</Weeks>
+<Bonus>+2 “ТЕАТРА ТЕНЕЙ”</Bonus>
+<TimesPerWeek>2 РАЗА В НЕДЕЛЮ</TimesPerWeek>
+<Lesson>1 ЗАНЯТИЕ</Lesson>
+<Hour>2 АСТРОНОМИЧЕСКИХ ЧАСА</Hour>
+<Group>ГРУППЫ ПО 6-10 ЧЕЛОВЕК</Group>
+<Price>160$/МЕСЯЦ</Price>
+</PriceListColumn>
+
+<PriceListColumn>
+<NamePurpose>КУРС ДЛЯ ПОДРОСТКОВ И ВЗРОСЛЫХ</NamePurpose>
+<Weeks>10 ПРАКТИЧЕСКИХ НЕДЕЛЬ</Weeks>
+<Bonus>+2 ПОТГОТОВКИ К ВЫСТУПЛЕНИЮ</Bonus>
+<TimesPerWeek>2 РАЗА В НЕДЕЛЮ</TimesPerWeek>
+<Lesson>1 ЗАНЯТИЕ</Lesson>
+<Hour>2 АСТРОНОМИЧЕСКИХ ЧАСА</Hour>
+<Group>ГРУППЫ ПО 6-8 ЧЕЛОВЕК</Group>
+<Price>140$/МЕСЯЦ</Price>
+</PriceListColumn>
+
+<PriceListColumn>
+<NamePurpose>КУРС ПО ВВЕДЕНИЮ В ПРОФЕССИЮ</NamePurpose>
+<Weeks>12 ПРАКТИЧЕСКИХ НЕДЕЛЬ</Weeks>
+<Bonus>+2 ПОТГОТОВКИ К ВЫСТУПЛЕНИЮ</Bonus>
+<TimesPerWeek>2 РАЗА В НЕДЕЛЮ</TimesPerWeek>
+<Lesson>1 ЗАНЯТИЕ</Lesson>
+<Hour>2 АСТРОНОМИЧЕСКИХ ЧАСА</Hour>
+<Group>ГРУППЫ ПО 6-8 ЧЕЛОВЕК</Group>
+<Price>160$/МЕСЯЦ</Price>
+</PriceListColumn>
+</PriceList>
